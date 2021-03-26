@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div id="app" class="flex-center">
+        <div class="form">
+            <div class="title p-1">
+                <label for="title">Title</label>
+                <input name="title" id="title" class="mt-1" type="text" v-model="title" placeholder="Please enter the title">
+            </div>
+            <div class="description p-1">
+                <label for="desc">Description</label>
+                <input name="desc" id="desc" class="mt-1" type="text"  v-model="description" placeholder="Please enter information">
+            </div>
+            <div class="status p-1 flex-col">
+                <label for="status">Status</label>
+                <select v-model="status"  class="mt-1" id="status" name="status" >
+                    <option selected disabled value="">Please select one</option>
+                    <option value="complete">Complete</option>
+                    <option value="waiting">Waiting ...</option>
+                    <option value="in procees">In process</option>
+                </select>
+                    <button v-if="isAdd" ref="formButton" @click="handleSave" class="mt-1"> Add New </button>
+                    <button :style ="{backgroundColor:'#f44336',color:'#fff'}"v-if="isUpdate" ref="formButton" @click="handleUpdate" class="mt-1"> Update </button>
+            </div>
+            <div class="log p-1">
+                <div class="show">
+                    <label for="isComplete">Show</strong>
+                        <select  v-model="filter" class="mt-1" id="isComplete" name="isComplete" >
+                            <option selected disabled value="">Please select one</option>
+                            <option  value="all">All</option>
+                            <option  value="complete">Complete</option>
+                            <option  value="waiting">Waiting ...</option>
+                            <option  value="in procees">In process</option>
+                        </select>
+                </div>
+                <div v-if="show"  class="log flex-col">
+                    <template v-for="(todo,index) in todos">
+                        <div  v-if="todo.status == filter || filter == 'all' " class="log-data flex-col p-1 mt-1">
+                            <strong>{{todo.title}}</strong><hr>
+                            <section class="log-content mt-1 p-1">{{todo.description}}</section>
+                            <button @click="changeButton(index)" id="editButton"class="mt-1">Edit</button>
+                        </div>
+                </template>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
