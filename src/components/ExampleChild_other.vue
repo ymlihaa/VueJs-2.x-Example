@@ -1,14 +1,14 @@
 <template>
-  <div class="chid-box">
-    <strong>Box-1 Child Component</strong>
+  <div class="chid-box-other">
+    <strong>Box-2 Child Component </strong>
     <input
       v-model="passingData"
       type="text"
       placeholder="please pass to parent data"
     />
-    <button @click="sendToParent">Send to Parent</button>
-    <strong>Box-2 Child'den gelen data </strong>
-    <p>{{ incomingData }}</p>
+    <button @click="sendToParentToChild">Send to Parent to other Child</button>
+    <strong>Box-1 Child'den gelen data </strong>
+    <p>{{ from_box_one }}</p>
   </div>
 </template>
 
@@ -20,16 +20,16 @@ export default {
     };
   },
   methods: {
-    sendToParent() {
-      this.$emit("sendingData", this.passingData);
+    sendToParentToChild() {
+      this.$emit("sendingDataFromChild", this.passingData);
     },
   },
-  props: ["incomingData"],
+  props: ["from_box_one"],
 };
 </script>
 
-<style >
-.chid-box {
+<style scoped>
+.chid-box-other {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -58,9 +58,5 @@ button {
   background-color: #0065b5;
   color: white;
   padding: 0.6rem;
-}
-
-strong {
-  margin-top: 1rem;
 }
 </style>
