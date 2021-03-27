@@ -1,13 +1,14 @@
 <template>
-  <div><example-zone /></div>
+  <div><EventBusRoot /></div>
 </template>
 
 
 <script>
-import ExampleZone from "./views/ExampleZone.vue";
+// import ExampleZone from "./views/ExampleZone.vue";
+import EventBusRoot from "./views/EventBusRoot";
 export default {
   components: {
-    ExampleZone,
+    EventBusRoot,
   },
 };
 </script>
