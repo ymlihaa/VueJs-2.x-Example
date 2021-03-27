@@ -12,4 +12,9 @@
 
 ![eventBus](https://user-images.githubusercontent.com/33762342/112709198-46f50c00-8ec8-11eb-9076-3a791208f929.gif)
 
+##Mini Example
+
+![server](https://user-images.githubusercontent.com/33762342/112709930-6f800480-8ece-11eb-933b-a0ca546fd727.gif)
+
+
 
