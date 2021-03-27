@@ -8,5 +8,8 @@
 ## sending data from child to child 
 
 ![childtochild](https://user-images.githubusercontent.com/33762342/112708379-bbc54780-8ec2-11eb-889c-0727bbf7caff.gif)
+##EventBus Kullanarak Componentler Arası Data iletişimi
+
+![eventBus](https://user-images.githubusercontent.com/33762342/112709198-46f50c00-8ec8-11eb-9076-3a791208f929.gif)
 
 
