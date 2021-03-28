@@ -17,5 +17,7 @@
 
 ![server](https://user-images.githubusercontent.com/33762342/112709930-6f800480-8ece-11eb-933b-a0ca546fd727.gif)
 
+## Dynamic Component Example 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/33762342/112760671-858de200-9000-11eb-9d7f-b5920cafc4cb.gif)
 
 
